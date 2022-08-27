@@ -1,0 +1,11 @@
+from django.shortcuts import render
+from rest_framework import viewsets
+
+from .models import Pessoa
+from .serializer import PessoaSerializer
+
+
+class PessoaViewSet(viewsets.ModelViewSet):
+    queryset = Pessoa.objects.all()
+    serializer_class = PessoaSerializer
+
